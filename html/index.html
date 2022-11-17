@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INJAY FITNESS STORE</title>
+
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- footer css -->
+    <link rel="stylesheet" href="css/productstyle.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet"> -->
+
+    <!-- Navbar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!-- Hero -->
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Footer -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- scripts -->
+    <script src="js/searchProducts.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+</head>
+
+<body>
+
+    <!-- navbar section -->
+
+    <div class="nav-container">
+        <p href="index.html" class="nav-logo">INJAY FITNESS STORE<span class="material-symbols-outlined dumble">
+                fitness_center
+            </span></p>
+        <div class="navlink-container">
+            <a href="#" class="nav-link">Home</a>
+            <a class="nav-link">About</a>
+            <a class="nav-link">contact</a>
+            <a class="nav-link">Blog</a>
+            <span class="material-symbols-outlined cart-logo">
+                shopping_bag
+            </span>
+        </div>
+        <div class="navlink-container-resp">
+            <span class="material-symbols-outlined cart-logo" onclick="openNav()">
+                menu
+            </span>
+        </div>
+        <div class="resp-nav" id="respNav">
+            <a href="#" class="nav-link">Home</a>
+            <a class="nav-link">About</a>
+            <a class="nav-link">contact</a>
+            <a class="nav-link">Blog</a>
+        </div>
+    </div>
+
+    <!-- hero section -->
+
+    <div class="hero-section">
+        <video class="hero-video" autoplay="autoplay" muted loop>
+            <source src="images/video/pexels-ron-lach-7674509.mp4" />
+        </video>
+        <div class="hero-section-large-text">Equip your workouts..</div>
+    </div>
+
+    <!-- content section -->
+
+    <div class="content">
+        <div class="section">
+            <div class="headline-grid">
+                <div>
+                    <div class="text-label">Shop gym equipments</div>
+                    <input class="search-bar" placeholder="WHAT TO SEARCH" type="" id="search"
+                        onkeyup="searchProduct()" />
+                    <div class="text-content-size">Stylish modern collection options</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- products section -->
+
+    <div class="product">
+        <div class="section">
+            <div>
+                <div role="list" id="productGrid" class="product-grid">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- last section -->
+
+    <div class="mid-sec">
+        <div class="mid-window">
+        </div>
+    </div>
+
+    <!-- footer -->
+
+    <footer class="pro-footer">
+        <div class="pro-container">
+            <div class="pro-row">
+                <div class="pro-footer-col">
+                    <h4>company</h4>
+                    <ul class="pro-ul">
+                        <li>
+                            <a href="#">about us</a>
+                            <a href="#">our services</a>
+                            <a href="#">privacy policy</a>
+                            <a href="#">contact us</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro-footer-col">
+                    <h4>get help</h4>
+                    <ul class="pro-ul">
+                        <li>
+                            <a href="#">FAQ</a>
+                            <a href="#">shipping</a>
+                            <a href="#">returns</a>
+                            <a href="#">order status</a>
+                            <a href="#">payment options</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro-footer-col">
+                    <h4>Online shop</h4>
+                    <ul class="pro-ul">
+                        <li>
+                            <a href="#">Sign In</a>
+                            <a href="#">View Cart</a>
+                            <a href="#">My Wishlist</a>
+                            <a href="#">Help</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pro-footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"> <i class="fa fa-facebook-official"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        allProducts()
+
+        function openNav() {
+            let navPop = document.getElementById("respNav")
+            if (navPop.className === "resp-nav") {
+                navPop.className = navPop.className + " clicked"
+            }
+            else {
+                navPop.className = "resp-nav"
+            }
+        }
+    </script>
+</body>
+
+</html>
